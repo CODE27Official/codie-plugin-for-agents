@@ -1,0 +1,22 @@
+{
+  "hooks": {
+    "SessionStart": [{ "hooks": [{ "type": "command", "command": "node \"${PLUGIN_ROOT}/dist/stop-hook.mjs\" session-start", "timeout": 5 }] }],
+    "SessionEnd": [{ "hooks": [{ "type": "command", "command": "node \"${PLUGIN_ROOT}/dist/stop-hook.mjs\" session-end", "timeout": 3 }] }],
+    "UserPromptSubmit": [{ "hooks": [{ "type": "command", "command": "node \"${PLUGIN_ROOT}/dist/stop-hook.mjs\" prompt", "timeout": 5 }] }],
+    "PreToolUse": [{ "matcher": "(^|[._])(request_user_input|request_user_input_async)$", "hooks": [{ "type": "command", "command": "node \"${PLUGIN_ROOT}/dist/stop-hook.mjs\" ask", "timeout": 5 }] }],
+    "PostToolUse": [{ "matcher": "(^|__)codie_poll$", "hooks": [{ "type": "command", "command": "node \"${PLUGIN_ROOT}/dist/stop-hook.mjs\" poll-result", "timeout": 5 }] }],
+    "PermissionRequest": [{ "hooks": [{ "type": "command", "command": "node \"${PLUGIN_ROOT}/dist/stop-hook.mjs\" permission", "timeout": 5 }] }],
+    "Interrupt": [{ "hooks": [{ "type": "command", "command": "node \"${PLUGIN_ROOT}/dist/stop-hook.mjs\" interrupt", "timeout": 3 }] }],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/dist/stop-hook.mjs\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "codie-codex-plugin",
+  "version": "0.10.10",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "build": "esbuild server=src/server.mjs stop-hook=src/stop-hook.mjs agentd=src/agentd.mjs --bundle --platform=node --format=esm --target=node20 --outdir=dist --out-extension:.js=.mjs --external:bufferutil --external:utf-8-validate --legal-comments=none \"--banner:js=import { createRequire as __cr } from 'node:module'; const require = __cr(import.meta.url);\""
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.12",
+    "ws": "^8.18.0"
+  },
+  "license": "MIT",
+  "description": "Codie × Codex plugin; device/pairing/protocol code is shared from ../codie-claude-plugin and bundled into dist/",
+  "dependencies": {
+    "codie-host": "file:../codie_host"
+  }
+}

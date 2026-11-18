@@ -1,0 +1,8 @@
+{
+  "name": "codie",
+  "version": "0.10.10",
+  "description": "Codie device pairing, voice tasks and reminders",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "requires_local_executor": true
+}

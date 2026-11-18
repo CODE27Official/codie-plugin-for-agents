@@ -1,0 +1,6 @@
+{
+  "name": "codie",
+  "owner": { "name": "CODE27" },
+  "description": "Codie voice devices × Claude Code",
+  "plugins": [{ "name": "codie", "source": "./claude", "version": "0.10.10", "description": "Let Codie voice devices on your LAN give instructions straight to Claude Code" }]
+}
