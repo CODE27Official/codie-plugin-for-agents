@@ -1,6 +1,6 @@
 # Codie × Codex
 
-A local Codex plugin modeled on the repo's `codie-claude-plugin`. Requires Node.js 20+.
+A local Codex plugin modeled on the repo's `codie-claude-plugin`. Requires Node.js 20+ and **a Codie device running firmware 1.6.0 or later**. Earlier firmware versions are not supported; update your Codie before pairing.
 
 Supports LAN discovery, on-screen code pairing, status checks, unpairing, claiming device tasks with voice replies, and question/every-turn reminders. Device tasks arrive as the device model's `ask_agent` / `cancel_task` tool calls, the same as with the Claude plugin.
 

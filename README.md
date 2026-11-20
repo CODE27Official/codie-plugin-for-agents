@@ -6,7 +6,7 @@ Version 0.10.10.
 
 ## Before you start
 
-- Connect your computer and Codie to the same trusted Wi-Fi network. Update Codie to the latest firmware.
+- **A Codie device running firmware 1.6.0 or later is required.** Earlier firmware versions are not supported; update your Codie before pairing. Connect your computer and Codie to the same trusted Wi-Fi network.
 - Install Claude Code or Codex and sign in. On Windows, install Git as well.
 - In PowerShell on Windows or Terminal on macOS, check that Node.js is version 20 or newer:
 
@@ -80,7 +80,7 @@ After reopening the session, you can also say "set up Codie" to start the wizard
 
 - macOS may ask for Local Network permission on first run: allow it (the computer finds and connects to the device on the LAN).
 - Read out the pairing code on the device screen.
-- The device needs current Codie firmware: pairing must issue a client credential. Older firmware is not supported.
+- The device needs **Codie firmware 1.6.0 or later**: pairing must issue a client credential. Earlier firmware versions are not supported.
 
 ## Updating
 

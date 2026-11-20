@@ -16,7 +16,7 @@ Codie main app (clt01) — its model calls the ext.* tools ask_agent / cancel_ta
 
 ## Prerequisites
 
-- Current Codie firmware: pairing must issue a **client credential**, and the device's model must offer external tools (`ext.*`). Older firmware is not supported: pairing fails and saves nothing ("Update the Codie firmware").
+- **Codie firmware 1.6.0 or later is required.** Pairing must issue a **client credential**, and the device's model must offer external tools (`ext.*`). Earlier firmware versions are not supported; update your Codie before pairing.
 - Device and computer are on the **same LAN** (mDNS discovery of the device; the computer connects to the device).
 - Node ≥ 20 on PATH.
 - Claude Code signed in with **claude.ai** (required by the channels research preview; channels do not work under `-p` / Agent SDK, only in interactive sessions).
