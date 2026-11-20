@@ -2,7 +2,7 @@
 
 Let **Codie voice devices** on your LAN give instructions straight to Claude Code or Codex on your computer: say "on the computer, …" to Codie, the agent on the computer does it, and Codie reads you the result when it's done. No need to keep "listening" on.
 
-Version 0.10.10.
+Version 0.10.11.
 
 ## Before you start
 

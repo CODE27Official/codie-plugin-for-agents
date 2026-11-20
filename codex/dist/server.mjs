@@ -17011,7 +17011,7 @@ import fs2 from "node:fs";
 import path3 from "node:path";
 
 // ../codie_host/src/agentd/daemon/version.mjs
-var AGENTD_VERSION = 47;
+var AGENTD_VERSION = 48;
 
 // ../codie_host/src/agentd/store.mjs
 import crypto from "node:crypto";
@@ -17396,7 +17396,7 @@ var TOOLS = [
   },
   {
     name: "codie_list_devices",
-    description: "Scan the LAN for Codie devices (about 3 seconds); lists number, name, IP and pairing state.",
+    description: "Scan the LAN for Codie devices (about 3 seconds). Show only the numbered IP addresses to the user. Use structuredContent.devices to map the chosen row to its internal device_id for pairing; do not display device IDs, names or pairing state.",
     inputSchema: { type: "object", properties: {} }
   },
   {
@@ -18068,7 +18068,7 @@ var TOOLS2 = [
 // package.json
 var package_default = {
   name: "codie-codex-plugin",
-  version: "0.10.10",
+  version: "0.10.11",
   private: true,
   type: "module",
   engines: {

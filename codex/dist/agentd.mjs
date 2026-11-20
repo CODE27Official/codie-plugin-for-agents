@@ -7594,7 +7594,7 @@ var lsofOut = (args) => new Promise((resolve, reject) => {
 });
 
 // ../codie_host/src/agentd/daemon/version.mjs
-var AGENTD_VERSION = 47;
+var AGENTD_VERSION = 48;
 
 // ../codie_host/src/agentd/daemon/router.mjs
 import { randomUUID as randomUUID2 } from "node:crypto";
@@ -8712,11 +8712,10 @@ Options: mode question / every_turn; detail full / brief; language system or a t
       case "codie_list_devices": {
         const found = await pairing.scan(3e3);
         if (!found.length) return text("No Codie device found on the LAN (make sure the device is on and on the same network as the computer).");
-        const lines = found.map((d, i) => {
-          const st = d.paired ? d.online ? "paired \xB7 online" : "paired \xB7 offline" : "not paired";
-          return `${i + 1}. ${d.name || d.deviceId}   ${d.host}   ${st}   (device_id=${d.deviceId})`;
-        });
-        return text(lines.join("\n"));
+        return {
+          ...text(found.map((d, i) => `${i + 1}. ${d.host}`).join("\n")),
+          structuredContent: { devices: found.map((d) => ({ ip: d.host, device_id: d.deviceId })) }
+        };
       }
       case "codie_pair_begin": {
         const o = await pairing.begin(args.device_id);

@@ -25,7 +25,7 @@ import fs2 from "node:fs";
 import path2 from "node:path";
 
 // ../codie_host/src/agentd/daemon/version.mjs
-var AGENTD_VERSION = 47;
+var AGENTD_VERSION = 48;
 
 // ../codie_host/src/agentd/store.mjs
 import crypto from "node:crypto";
